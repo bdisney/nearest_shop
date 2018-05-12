@@ -10,6 +10,7 @@ class Shop < ApplicationRecord
   end
 
   def address_attributes_changed?
+    return true if new_record?
     %w[city street zip].each do |attr|
       return true if send(attr).present? && send("#{attr}_changed?")
     end
