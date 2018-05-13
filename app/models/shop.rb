@@ -1,5 +1,9 @@
 class Shop < ApplicationRecord
   geocoded_by :full_address
+
+  has_many :products_shops
+  has_many :products, through: :products_shops
+
   validates :city, :street, :zip, presence: true
   after_validation :geocode, if: :address_attributes_changed?
 
