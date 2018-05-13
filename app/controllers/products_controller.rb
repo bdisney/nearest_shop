@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path, notice: 'Saved'
+      redirect_to products_path, notice: t('activerecord.notices.cteated')
     else
       render :new
     end
@@ -24,14 +24,16 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      redirect_to @product
+      redirect_to @product, notice: t('activerecord.notices.updated')
     else
       render :edit
     end
   end
 
   def destroy
-    @product.destroy
+    if @product.destroy
+      redirect_to products_path, notice: t('activerecord.notices.deleted')
+    end
   end
 
   private

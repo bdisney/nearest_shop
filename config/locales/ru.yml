@@ -5,6 +5,8 @@ ru:
     show: Просмотр
     new: Добавить
     save: Сохранить
+    destroy: Удалить
+    actions: Действия
   activerecord:
     errors:
       header_title: 'Произошли следующие ошибки:'
@@ -17,6 +19,8 @@ ru:
               <<: *default_settings
     notices:
       cteated: Успешно создан
+      updated: Успешно обновлен
+      deleted: Успешно удален
     attributes:
       product:
         name: Наименование
