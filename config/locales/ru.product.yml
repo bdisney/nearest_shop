@@ -2,6 +2,8 @@ ru:
   products:
     new:
       page_name: Новый продукт
+    show:
+      page_name: Продукт
     edit:
       page_name: Редактировать продукт
     update:
