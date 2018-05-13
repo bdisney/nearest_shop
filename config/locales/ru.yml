@@ -1,0 +1,22 @@
+ru:
+  buttons:
+    back: Назад
+    edit: Редактировать
+    show: Просмотр
+    new: Добавить
+    save: Сохранить
+  activerecord:
+    errors:
+      header_title: 'Произошли следующие ошибки:'
+      models:
+        product:
+          attributes:
+            default_settings: &default_settings
+              blank: не может быть пустым
+            name:
+              <<: *default_settings
+    notices:
+      cteated: Успешно создан
+    attributes:
+      product:
+        name: Наименование

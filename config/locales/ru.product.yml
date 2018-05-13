@@ -1,0 +1,12 @@
+ru:
+  products:
+    new:
+      page_name: Новый продукт
+    edit:
+      page_name: Редактировать продукт
+    update:
+      page_name: Редактировать продукт
+    create:
+      page_name: Новый продукт
+    index:
+      page_name: Список продуктов
