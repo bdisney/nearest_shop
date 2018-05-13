@@ -11,4 +11,7 @@ html
 
   body
     .container
+      = render template: 'shared/notices'
+
+      h3 = current_page_name
       = yield
