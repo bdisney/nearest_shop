@@ -1,5 +1,3 @@
-= link_to t('buttons.new'), new_shop_path
-
 .result-table
   table.table.table-condensed.text-center
     thead
@@ -21,3 +19,4 @@
             = ' | '
             = link_to t('buttons.destroy'), shop_path(shop), method: :delete,
                     data: { confirm: t('buttons.confirm')}
+= link_to t('buttons.new'), new_shop_path, class: 'btn btn-default'

@@ -1,6 +1,9 @@
+= render 'form'
 .row
   .col-md-6
-    = link_to t('buttons.back'), shop_path(@shop)
+    = link_to t('buttons.back'), shop_path(@shop), class: 'btn btn-primary'
+    | &nbsp
+    = label_tag :submit_shop, t('buttons.save'), class: 'btn btn-success'
   .col-md-6.text-right
-    = link_to t('buttons.destroy'), shop_path(@shop), method: :delete, data: { confirm: t('buttons.confirm') }
-= render 'form'
+    = link_to t('buttons.destroy'), shop_path(@shop), method: :delete, data: { confirm: t('buttons.confirm') },
+            class: 'btn btn-danger'

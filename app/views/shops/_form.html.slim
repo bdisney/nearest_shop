@@ -18,7 +18,8 @@
     |&nbsp
   #products_shops
     - if edit_or_update_action?
-      p.text-right
+      br
+      p.text-left
         = link_to_add_association t('buttons.add_product'), f, :products_shops,
             { \
               :'data-association-insertion-traversal' => :closest,\
@@ -28,7 +29,5 @@
             }
       = f.fields_for :products_shops do |ps|
         = render partial: 'products_shop_fields', locals: { f: ps }
-
-
-
-  = f.submit t('buttons.save'), class: 'btn btn-default'
+  br
+  = f.submit t('buttons.save'), class: 'display-none', id: 'submit_shop'

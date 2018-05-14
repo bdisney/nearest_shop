@@ -26,6 +26,14 @@ ru:
               <<: *default_settings
         shop:
           attributes:
+            default_settings: &default_settings
+              blank: не может быть пустым
+            city:
+              <<: *default_settings
+            street:
+              <<: *default_settings
+            zip:
+              <<: *default_settings
             products_shops:
               invalid: Продукт не может быть сохранен
         products_shop:
