@@ -6,7 +6,7 @@ feature 'Someone can destroy product', %q{
   I want to be able to do it
 } do
 
-  let!(:product) { create(:product) }
+  given!(:product) { create(:product) }
 
   scenario 'Someone tries destroy product and cofirm destroy action' do
     visit products_path

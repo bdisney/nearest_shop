@@ -4,6 +4,7 @@ RSpec.describe Shop, type: :model do
   it { should validate_presence_of :city }
   it { should validate_presence_of :street }
   it { should validate_presence_of :zip }
+  it { should accept_nested_attributes_for :products_shops }
 
   describe 'default scope' do
     let!(:shop)         { create(:shop) }

@@ -6,7 +6,7 @@ feature 'Someone can edit product', %q{
   I want to be able update it
 } do
 
-  let!(:product) { create(:product) }
+  given!(:product) { create(:product) }
 
   scenario 'Someone edit product with valid data' do
     visit edit_product_path(product)
