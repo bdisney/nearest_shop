@@ -3,7 +3,7 @@
     = f.label :product_id
     |&nbsp
     = f.select :product_id, options_for_select(products_for_select, f.object.product_id), {},
-            { class: 'table-form-item__input' }
+            { class: 'js-product-select' }
   .form-group
     = f.label :price
     |&nbsp

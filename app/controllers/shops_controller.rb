@@ -17,7 +17,7 @@ class ShopsController < ApplicationController
     @shop = Shop.new(shop_params)
 
     if @shop.save
-      redirect_to shops_path
+      redirect_to shops_path, notice: t('activerecord.notices.cteated')
     else
       render :new
     end
@@ -28,6 +28,12 @@ class ShopsController < ApplicationController
       redirect_to @shop, notice: t('activerecord.notices.updated')
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @shop.destroy
+      redirect_to shops_path, notice: t('activerecord.notices.deleted')
     end
   end
 

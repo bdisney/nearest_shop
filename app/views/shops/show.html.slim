@@ -17,7 +17,7 @@ h4.text-center = t('activerecord.attributes.product.product_header')
         th.text-center = t('activerecord.attributes.products_shop.price')
     tbody
       - @shop.products_shops.each.with_index(1) do |record, index|
-        tr
+        tr id="#{record.product.id}"
           td = index
           td = record.product.name
           td = record.price

@@ -1,7 +1,7 @@
 class Shop < ApplicationRecord
   geocoded_by :full_address
 
-  has_many :products_shops
+  has_many :products_shops, dependent: :destroy
   has_many :products, through: :products_shops
 
   accepts_nested_attributes_for :products_shops, reject_if: :all_blank, allow_destroy: true
