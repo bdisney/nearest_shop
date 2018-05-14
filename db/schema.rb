@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180513125304) do
   create_table "products_shops", force: :cascade do |t|
     t.integer  "shop_id"
     t.integer  "product_id"
-    t.decimal  "price",      precision: 12, scale: 1
+    t.decimal  "price",      precision: 12, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["product_id"], name: "index_products_shops_on_product_id", using: :btree
