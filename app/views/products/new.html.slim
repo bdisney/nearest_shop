@@ -1,2 +1,7 @@
 .text-center
   = render 'form'
+.row
+  .col-md-6
+    = link_to t('buttons.back'), products_path, class: 'btn btn-primary'
+    | &nbsp
+    = label_tag :submit_product, t('buttons.save'), class: 'btn btn-success'
