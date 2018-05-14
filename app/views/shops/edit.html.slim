@@ -1,0 +1,6 @@
+.row
+  .col-md-6
+    = link_to t('buttons.back'), shop_path(@shop)
+  .col-md-6.text-right
+    = link_to t('buttons.destroy'), shop_path(@shop), method: :delete, data: { confirm: t('buttons.confirm') }
+= render 'form'

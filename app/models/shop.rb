@@ -4,7 +4,11 @@ class Shop < ApplicationRecord
   has_many :products_shops
   has_many :products, through: :products_shops
 
+  accepts_nested_attributes_for :products_shops, reject_if: :all_blank, allow_destroy: true
+
   validates :city, :street, :zip, presence: true
+  validates_associated :products_shops
+
   after_validation :geocode, if: :address_attributes_changed?
 
   scope :default, -> { where(default_for_all: true).first }

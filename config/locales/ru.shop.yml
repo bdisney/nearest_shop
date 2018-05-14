@@ -1,0 +1,14 @@
+ru:
+  shops:
+    new:
+      page_name: Новый магазин
+    show:
+      page_name: Магазин
+    edit:
+      page_name: Редактировать магазин
+    update:
+      page_name: Редактировать магазин
+    create:
+      page_name: Новый магазин
+    index:
+      page_name: Список магазинов

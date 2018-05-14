@@ -1,0 +1,23 @@
+= link_to t('buttons.new'), new_shop_path
+
+.result-table
+  table.table.table-condensed.text-center
+    thead
+      tr
+        th.text-center #
+        th.text-center id
+        th.text-center = t('activerecord.attributes.shop.address')
+        th.text-center = t('buttons.actions')
+    tbody
+      - @shops.each.with_index(1) do |shop, index|
+        tr id="#{shop.id}"
+          td = index
+          td = shop.id
+          td = shop.full_address
+          td
+            = link_to t('buttons.show'),    shop_path(shop)
+            = ' | '
+            = link_to t('buttons.edit'),    edit_shop_path(shop)
+            = ' | '
+            = link_to t('buttons.destroy'), shop_path(shop), method: :delete,
+                    data: { confirm: t('buttons.confirm')}
