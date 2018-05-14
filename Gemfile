@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'cocoon'
 gem 'geocoder'
 gem 'slim'
 
