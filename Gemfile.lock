@@ -49,7 +49,12 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
+    autoprefixer-rails (6.7.7.1)
+      execjs
     bindex (0.5.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
     capybara (2.18.0)
@@ -62,6 +67,7 @@ GEM
     capybara-webkit (1.15.0)
       capybara (>= 2.3, < 4.0)
       json
+    cocoon (1.2.9)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -224,9 +230,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.7)
   byebug
   capybara (~> 2.10, >= 2.10.1)
   capybara-webkit
+  cocoon
   coffee-rails (~> 4.2)
   database_cleaner
   factory_bot_rails

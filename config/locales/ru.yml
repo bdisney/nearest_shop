@@ -1,0 +1,53 @@
+ru:
+  buttons:
+    back: Назад
+    edit: Редактировать
+    show: Просмотр
+    new: Добавить
+    save: Сохранить
+    destroy: Удалить
+    actions: Действия
+    add_product: Добавить продукт
+    confirm: Вы уверены?
+  search_result:
+    no_records: К сожалению, ни одного товара в магазине не представлено
+  activerecord:
+    errors:
+      header_title: 'Произошли следующие ошибки:'
+      models:
+        product:
+          attributes:
+            default_settings: &default_settings
+              blank: не может быть пустым
+            name:
+              <<: *default_settings
+        shop:
+          attributes:
+            products_shops:
+              invalid: Продукт не может быть сохранен
+        products_shop:
+          attributes:
+            default_settings: &default_settings
+              blank: не может быть пустым
+            price:
+              <<: *default_settings
+    notices:
+      cteated: Успешно создан
+      updated: Успешно обновлен
+      deleted: Успешно удален
+    attributes:
+      store:
+        shops: Магазины
+      products_shop:
+        product_id: Продукт
+        price: Цена
+      product:
+        product_header: Ассортимент
+        name: Наименование
+      shop:
+        address: Адрес
+        city: Город
+        street: Улица
+        zip: индекс
+      shop/products_shops:
+        price: цена

@@ -1,12 +1,14 @@
 class CreateShops < ActiveRecord::Migration[5.0]
   def change
     create_table :shops do |t|
-      t.string :city
-      t.string :street
-      t.string :zip
+      t.string  :city
+      t.string  :street
+      t.string  :zip
 
-      t.float  :latitude,  index: true
-      t.float  :longitude, Index: true
+      t.float   :latitude,  index: true
+      t.float   :longitude, Index: true
+
+      t.boolean :default_for_all, default: false
 
       t.timestamps null: false
     end

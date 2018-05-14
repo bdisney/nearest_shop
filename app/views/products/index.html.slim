@@ -1,0 +1,23 @@
+= link_to t('buttons.new'), new_product_path
+
+.result-table
+  table.table.table-condensed.text-center
+    thead
+      tr
+        th.text-center #
+        th.text-center id
+        th.text-center = t('activerecord.attributes.product.name')
+        th.text-center = t('buttons.actions')
+    tbody
+      - @products.each.with_index(1) do |product, index|
+        tr id="#{product.id}"
+          td = index
+          td = product.id
+          td = product.name
+          td
+            = link_to t('buttons.show'),    product_path(product)
+            = ' | '
+            = link_to t('buttons.edit'),    edit_product_path(product)
+            = ' | '
+            = link_to t('buttons.destroy'), product_path(product), method: :delete,
+                    data: { confirm: 'Are you sure?' }

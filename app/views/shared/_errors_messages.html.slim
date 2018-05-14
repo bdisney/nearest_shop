@@ -1,0 +1,9 @@
+- if resource.errors.any?
+  .alert.alert-danger.alert-dismissible role="alert"
+    button type="button" class="close" data-dismiss="alert" aria-label="Close"
+      span aria-hidden="true" &times;
+    p = t('activerecord.errors.header_title')
+    - resource.errors.messages.each do |attribute, messages|
+      - messages.each do |message|
+        = "#{attribute} #{message}"
+        br
