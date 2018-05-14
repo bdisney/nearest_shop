@@ -11,6 +11,9 @@ ru:
     confirm: Вы уверены?
   search_result:
     no_records: К сожалению, ни одного товара в магазине не представлено
+  brand: Very useful app
+  all_shops: Магазины
+  all_products: Продукты
   activerecord:
     errors:
       header_title: 'Произошли следующие ошибки:'

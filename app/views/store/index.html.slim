@@ -1,4 +1,3 @@
-
 p
   = label_tag 'shops', t('activerecord.attributes.store.shops')
   = select_tag 'shops', options_for_select(@shops, cookies['selected_shop']), class: 'js-shops-select'
