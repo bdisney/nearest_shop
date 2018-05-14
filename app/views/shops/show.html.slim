@@ -1,23 +1,27 @@
 = @shop.full_address
 
-.row
-  .col-md-6
-    = link_to t('buttons.back'), shops_path
-  .col-md-6.text-right
-    = link_to t('buttons.edit'), edit_shop_path(@shop)
+- unless controller_name == 'store'
+  .row
+    .col-md-6
+      = link_to t('buttons.back'), shops_path
+    .col-md-6.text-right
+      = link_to t('buttons.edit'), edit_shop_path(@shop)
 
-h4.text-center = t('activerecord.attributes.product.product_header')
+- if @shop.products.present?
+  h4.text-center = t('activerecord.attributes.product.product_header')
 
-.result-table
-  table.table.table-condensed.text-center
-    thead
-      tr
-        th.text-center #
-        th.text-center = t('activerecord.attributes.product.name')
-        th.text-center = t('activerecord.attributes.products_shop.price')
-    tbody
-      - @shop.products_shops.each.with_index(1) do |record, index|
-        tr id="#{record.product.id}"
-          td = index
-          td = record.product.name
-          td = record.price
+  .result-table
+    table.table.table-condensed.text-center
+      thead
+        tr
+          th.text-center #
+          th.text-center = t('activerecord.attributes.product.name')
+          th.text-center = t('activerecord.attributes.products_shop.price')
+      tbody
+        - @shop.products_shops.each.with_index(1) do |record, index|
+          tr id="#{record.product.id}"
+            td = index
+            td = record.product.name
+            td = record.price
+- else
+  h4.text-center = t('search_result.no_records')

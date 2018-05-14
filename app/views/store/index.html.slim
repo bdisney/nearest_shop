@@ -1,5 +1,6 @@
-h1 'HALLO'
 
-p = select_tag 'shops', options_for_select(@shops, cookies['selected_shop']), class: 'js-shops-select'
+p
+  = label_tag 'shops', t('activerecord.attributes.store.shops')
+  = select_tag 'shops', options_for_select(@shops, cookies['selected_shop']), class: 'js-shops-select'
 .js-store
   p = render partial: 'store', locals: { shop: @shop }
