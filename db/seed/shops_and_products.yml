@@ -1,52 +1,18 @@
 shops:
-  - id: 1
-    city: Moscow
+  - city: Moscow
     street: Tverskaya, 7
     zip: 125032
     default_for_all: true
 
-  - id: 2
-    city: Moscow
+  - city: Moscow
     street: Leninskaya Sloboda, 26
     zip: 115280
 
-  - id: 3
-    city: Orenburg
+  - city: Orenburg
     street: Brestskaya, 20
     zip: 460000
 
 products:
-  - id: 1
-    name: Book
-  - id: 2
-    name: Souvenir
-  - id: 3
-    name: Photo Frame
-
-products_shops:
-  - id: 1
-    shop_id: 1
-    product_id: 1
-    price: 67.72
-  - id: 2
-    shop_id: 1
-    product_id: 2
-    price: 399.50
-  - id: 3
-    shop_id: 1
-    product_id: 3
-    price: 1490
-
-  - id: 4
-    shop_id: 2
-    product_id: 1
-    price: 77.90
-  - id: 5
-    shop_id: 2
-    product_id: 2
-    price: 449
-
-  - id: 6
-    shop_id: 3
-    product_id: 3
-    price: 3000.20
+  - name: Book
+  - name: Souvenir
+  - name: Photo Frame
