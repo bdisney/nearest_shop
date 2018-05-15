@@ -1,4 +1,5 @@
 p
   = label_tag 'shops', t('activerecord.attributes.store.shops')
-  = select_tag 'shops', options_for_select(@shops, cookies['selected_shop'] || @shop.id), class: 'js-shops-select'
+  = select_tag 'shops', options_for_select(@shops, cookies['selected_shop'] || @shop.id),
+          class: 'js-shops-select'
 = render template: 'shops/show'
