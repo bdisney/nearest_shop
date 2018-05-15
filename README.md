@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Тестовое приложение по определию средствами HTML5 геолокации пользователя и выбора ближайшего магазина.
+Перед установкой заменить database.sample.yml на database.yml
 
-Things you may want to cover:
+```ruby
+bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+```    
 
-* Ruby version
+Для наполнения бд тестовыми данными, запустить задачу:
 
-* System dependencies
+```ruby
+bundle exec rake shops_with_products:seed
+```   
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+В результате будет создано три магазина с тремя товарами (с случайно ценой) в каждом.

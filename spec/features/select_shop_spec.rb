@@ -6,7 +6,7 @@ feature 'User can select shop', %q{
   I want to be able select shop
 } do
 
-  given!(:default_shop) { create(:shop, :default) }
+  given!(:default_shop) { create(:shop, :default, :with_nested_attrs) }
   given!(:shop)         { create(:shop, city: 'Orenburg') }
 
 
@@ -15,11 +15,16 @@ feature 'User can select shop', %q{
 
     expect(page).to have_select('shops')
     expect(page).to have_content(default_shop.full_address)
+    expect(page).to have_content(I18n.t('activerecord.attributes.product.product_header'))
+    expect(page).to have_content('Some name')
     expect(page).to_not have_content(shop.full_address)
 
     select shop.full_address, from: 'shops'
     expect(page).to have_content(shop.full_address)
     expect(page).to_not have_content(default_shop.full_address)
+    expect(page).to_not have_content(I18n.t('activerecord.attributes.product.product_header'))
+    expect(page).to_not have_content('Some name')
+    expect(page).to have_content(I18n.t('search_result.no_records'))
   end
 
   scenario 'App memorize selected shop', js: true do

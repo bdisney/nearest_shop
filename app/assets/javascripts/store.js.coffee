@@ -33,6 +33,7 @@ selectShop = ->
       data: { selected_shop: { shop_id: shop_id} }
       document.cookie = "selected_shop=" + escape(shop_id)
 
-$(document).on 'turbolinks:load', ->
+$(document).on 'ready ajaxSuccess', ->
+  return if $('.js-store').length == 0
   getUserPosition()
   selectShop()

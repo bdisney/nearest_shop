@@ -13,10 +13,8 @@ FactoryBot.define do
     end
 
     trait :with_nested_attrs do
-
-      before(:create) do |shop, evaluator|
+      before(:create) do |shop|
         create(:products_shop, shop: shop, product: create(:product))
-
       end
     end
   end

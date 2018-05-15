@@ -1,4 +1,6 @@
+= render 'form'
 .row
   .col-md-6
-    = link_to t('buttons.back'), shops_path
-= render 'form'
+    = link_to t('buttons.back'), shops_path, class: 'btn btn-primary'
+    | &nbsp
+    = label_tag :submit_shop, t('buttons.save'), class: 'btn btn-success'

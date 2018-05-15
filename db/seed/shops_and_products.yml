@@ -1,0 +1,18 @@
+shops:
+  - city: Moscow
+    street: Tverskaya, 7
+    zip: 125032
+    default_for_all: true
+
+  - city: Moscow
+    street: Leninskaya Sloboda, 26
+    zip: 115280
+
+  - city: Orenburg
+    street: Brestskaya, 20
+    zip: 460000
+
+products:
+  - name: Book
+  - name: Souvenir
+  - name: Photo Frame

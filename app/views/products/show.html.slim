@@ -1,1 +1,9 @@
-= @product.name
+p
+  = Product.human_attribute_name(:name)
+  = ': '
+  = @product.name
+br
+.row
+  = link_to t('buttons.back'), products_path, class: 'btn btn-primary'
+  | &nbsp
+  = link_to t('buttons.edit'), edit_product_path(@product), class: 'btn btn-default'
